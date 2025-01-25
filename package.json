@@ -1,12 +1,13 @@
 {
-	"name": "http-request",
-	"version": "0.0.1",
+	"name": "http-request-svelte",
+	"version": "0.0.2",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run prepack",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"prepack": "svelte-kit sync && svelte-package && publint",
+		"publish": "npm run build && npm publish",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
@@ -14,6 +15,7 @@
 		"test:unit": "vitest",
 		"test": "npm run test:unit -- --run"
 	},
+	"license": "MIT",
 	"files": [
 		"dist",
 		"!dist/**/*.test.*",
